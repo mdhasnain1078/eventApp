@@ -5,7 +5,6 @@ import '../../../common/models/event_model.dart';
 import 'package:http/http.dart' as http;
 
 final eventRepositoryProvider = Provider((ref) => EventRepository());
-
 class EventRepository{
     Future<List<Event>>  fetchData() async {
     final response = await http.get(Uri.parse('https://sde-007.api.assignment.theinternetfolks.works/v1/event'));
